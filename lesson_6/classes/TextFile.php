@@ -19,6 +19,8 @@ Class TextFile
     public function append($text)
     {
         $this->data[] = $text . PHP_EOL;
+
+        return $this;
     }
 
     public function save()

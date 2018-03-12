@@ -8,7 +8,6 @@ $file = $guestBook->getData();
 
 if(isset($_POST['single']))
 {
-    $guestBook->append($_POST['single']);
-    $guestBook->save();
+    $guestBook->append($_POST['single'])->save();
 }
 
