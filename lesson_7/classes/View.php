@@ -28,7 +28,7 @@ class View
             $$key = $value;
           }
 
-        include __DIR__ . '/../templates/' . $template . '.php';
+        include $template;
 
         $html = ob_get_contents();
 

@@ -5,11 +5,6 @@ require_once __DIR__ . '/../classes/View.php';
 
 $guestBook = new GuestBook();
 
-$main = new View();
-
-$main->assign('records', $guestBook->getRecord());
-$main->display('guestBook');
-
 if(isset($_POST['message'])){
 
     $newLine = new GuestBookRecord($_POST['message']);
@@ -18,7 +13,11 @@ if(isset($_POST['message'])){
     $guestBook->save();
 
     header('Location: /lesson_7/guestBook/');
+}else{
+    $main = new View();
 
+    $main->assign('records', $guestBook->getRecord());
+    $main->display( __DIR__ . '/../templates/guestBook.php');
 }
 
 
