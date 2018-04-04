@@ -4,21 +4,19 @@ require_once __DIR__ . '/DB.php';
 
 class Article
 {
+    protected $id;
     protected $title;
     protected $text;
     protected $author;
 
-    public function __construct($title, $text, $author)
-    {
-        $this->title = $title;
-        $this->text = $text;
-        $this->author = $author;
-
-    }
-
     public function getTitle()
     {
         return $this->title;
+    }
+
+    public function getId()
+    {
+        return $this->id;
     }
 
     public function getText()
@@ -29,5 +27,23 @@ class Article
     public function getAuthor()
     {
         return $this->author;
+    }
+
+    public function findAll(string $class)
+    {
+        $dbh = new DB(include __DIR__ . '/../configDB.php');
+
+        $sql = 'SELECT * FROM news';
+        $sth = $dbh->query($sql, [], $class);
+        return $sth;
+    }
+
+    public function findOne($id, string $class)
+    {
+        $dbh = new DB(include __DIR__ . '/../configDB.php');
+
+        $sql = 'SELECT * FROM news WHERE id=:id';
+        $sth = $dbh->query($sql, [':id' => $id], $class);
+        return $sth;
     }
 }

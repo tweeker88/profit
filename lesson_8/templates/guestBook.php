@@ -22,7 +22,7 @@
 </div>
 <div class="row">
     <div class="container">
-        <form method="POST" action="/lesson_7/news/index.php">
+        <form method="POST" action="/lesson_7/news/news.php">
             <div class="form-group">
                 <label for="exampleInputSingle">Добавить запись</label>
                 <input type="text" class="form-control" name="message" id="exampleInputSingle"placeholder="Запись">

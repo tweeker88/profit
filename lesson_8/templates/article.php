@@ -5,11 +5,11 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Lesson 8</title>
+    <title><?php echo $article[0]->getTitle();?></title>
 </head>
 <body>
-<a href="/lesson_8/guestBook/index.php">Гостевая книга</a>
-<a href="/lesson_8/gallery/index.php">Галерея</a>
-<a href="/lesson_8/news/news.php">Новости</a>
+<h1><?php echo $article[0]->getTitle();?></h1>
+<hr>
+<?php echo $article[0]->getText();?>
 </body>
 </html>

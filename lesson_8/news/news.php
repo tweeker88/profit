@@ -8,7 +8,7 @@ $articles = new News();
 $main = new View();
 
 $main->assign('articles', $articles->getArticles());
-$main->display('news');
+$main->display(__DIR__ . '/../templates/news.php');
 
 
 

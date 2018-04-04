@@ -8,7 +8,7 @@ $guestBook = new GuestBook();
 $main = new View();
 
 $main->assign('records', $guestBook->getRecord());
-$main->display('guestBook');
+$main->display(__DIR__ . '/../templates/guestBook.php');
 
 if(isset($_POST['message'])){
 

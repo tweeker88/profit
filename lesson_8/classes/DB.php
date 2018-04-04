@@ -20,11 +20,14 @@ class DB
         return $this->dbh->execute($sql);
     }
 
-    public function query(string $sql, array $data)
+    public function query(string $sql, array $data, string $class)
     {
         $sth = $this->dbh->prepare($sql);
         $sth->execute($data);
 
-        return $sth->fetchAll() ?? false;
+        $articles  = $sth->fetchAll(PDO::FETCH_CLASS, $class);
+
+        return !empty($articles) ? $articles : false;
+
     }
 }

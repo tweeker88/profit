@@ -8,7 +8,7 @@
     <title>Lesson 4</title>
 </head>
 <body>
-<a href="/lesson_7/news/index.php">Гостевая книга</a>
+<a href="/lesson_7/guestBook/index.php">Гостевая книга</a>
 <a href="/lesson_7/gallery/index.php">Галерея</a>
 <a href="/lesson_7/news/index.php">Новости</a>
 </body>

@@ -8,7 +8,7 @@ $gallery = new Gallery();
 $main = new View();
 
 $main->assign('arrayImg', $gallery->getImg());
-$main->display('gallery');
+$main->display(__DIR__ . '/../templates/gallery.php');
 
 if (!empty($_FILES['pic'])) {
     $gallery->upload($_FILES['pic']);

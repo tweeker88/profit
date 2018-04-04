@@ -10,22 +10,18 @@ Class News
 
     public function __construct()
     {
-        $this->articles[] = new Article('Тестовая запись 1', 'Тестовый текст 1');
-        $this->articles[] = new Article('Тестовая запись 2', 'Тестовый текст 2');
-        $this->articles[] = new Article('Тестовая запись 3', 'Тестовый текст 3');
+        $this->articles = new Article();
 
     }
 
     public function getArticles()
     {
-        return $this->articles;
+        return $this->articles->findAll('Article');
     }
 
     public function getArticle($id)
     {
-        return $this->articles[$id] ?? null;
+        return $this->articles->findOne($id, 'Article');
     }
-
-
 
 }
