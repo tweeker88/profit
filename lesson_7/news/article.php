@@ -8,7 +8,7 @@ $articles = new News();
 $main = new View();
 if($articles->getArticle($_GET['id'])){
     $main->assign('article', $articles->getArticle($_GET['id']));
-    $main->display('singleArticle');
+    $main->display(__DIR__ . '/../templates/article.php');
 }else{
     header("HTTP/1.0 404 Not Found");
     $main->display('404');
