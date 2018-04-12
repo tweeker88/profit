@@ -25,9 +25,9 @@ class DB
         $sth = $this->dbh->prepare($sql);
         $sth->execute($data);
 
-        $articles  = $sth->fetchAll(PDO::FETCH_CLASS, $class);
+        $data  = $sth->fetchAll(PDO::FETCH_CLASS, $class);
 
-        return !empty($articles) ? $articles : false;
+        return !empty($data) ? $data : false;
 
     }
 }
