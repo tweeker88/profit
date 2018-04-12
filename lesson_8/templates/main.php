@@ -10,6 +10,6 @@
 <body>
 <a href="/lesson_8/guestBook/index.php">Гостевая книга</a>
 <a href="/lesson_8/gallery/index.php">Галерея</a>
-<a href="/lesson_8/news/news.php">Новости</a>
+<a href="/lesson_8/index.php">Новости</a>
 </body>
 </html>
