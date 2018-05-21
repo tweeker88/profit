@@ -1,0 +1,8 @@
+CREATE TABLE `news` (
+    `id` SERIAL,
+     `title` VARCHAR(255),
+      `text` TEXT,
+       `author` VARCHAR(255)
+)
+
+)
